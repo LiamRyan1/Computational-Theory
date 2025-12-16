@@ -9,9 +9,8 @@ This project implements the SHA-256 algorithm in Python without using any crypto
 ## Repository Structure
 
 ```
-.
-problems.ipynb          #Main notebook with all implementations
-README.md              #This file
+|--- problems.ipynb          #Main notebook with all implementations
+|----README.md              #This file
 ```
 
 ## Problems Solved
@@ -61,45 +60,36 @@ Demonstration of SHA-256's vulnerability when used for password storage:
 ## Requirements
 
 - Python 3.7+
+- Jupyter Notebook or JupyterLab
 - NumPy
 
 ```bash
-pip install numpy
+pip install jupyter numpy
 ```
 
-## Usage
+## Getting Started
 
-### Hashing a Message
+### Running the Notebook
 
-```python
-from problems import sha256
+1. **Clone or download this repository**
+   ```bash
+   git clone <your-repository-url>
+   cd <repository-name>
+   ```
 
-# Hash a string
-hash_value = sha256("hello world")
-print(hash_value)
-# Output: b94d27b9934d3e08a52e52d7da7dabfac484efe37a5380ee9088f7ace2efcde9
+2. **Launch Jupyter Notebook**
+   ```bash
+   jupyter notebook
+   ```
+   This will open Jupyter in your web browser.
 
-# Hash bytes directly
-hash_value = sha256(b"hello world")
-print(hash_value)
-```
+3. **Open `problems.ipynb`**
+   - Navigate to the file in the Jupyter interface
+   - Click to open it
 
-### Using Individual Components
-
-```python
-from problems import *
-
-# Use bitwise operations
-result = Ch(0xFF00FF00, 0xAAAAAAAA, 0x55555555)
-
-# Generate SHA-256 constants
-constants = generate_sha256_constants(64)
-
-# Parse and pad a message
-message = b"test message"
-for block in block_parse(message):
-    print(f"Block: {block.hex()}")
-```
+4. **Run the cells**
+   - Execute cells sequentially using `Shift + Enter`
+   - The notebook is designed to be run from top to bottom
 
 ## Testing
 
